@@ -1,7 +1,0 @@
-[submodule "e1"]
-    path = e1
-    url = https://github.com/thisSanD/e1.git
-
-[submodule "e3"]
-    path = e3
-    url = https://github.com/thisSanD/e3.git
