@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOBLOX</title>
+    <style>
+        *,
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #trailer {
+            position: fixed;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .intro {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.25);
+            color: white;
+            padding: 20px;
+            width: 100%;
+            font-size: 20px;
+            font-family: fantasy;
+        }
+
+        #pause {
+            border: none;
+            color: white;
+            background-color: black;
+            margin-top: 20px;
+            padding: 10px;
+            width: 15%;
+            font-weight: 800;
+        }
+
+        #pause:hover {
+            transform: scale(1.1);
+            background-color: rgba(0, 0, 0, 0.20);
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop id="trailer">
+        <source src="game_trailer.mp4" type="video/mp4">
+    </video>
+    <div class="intro">
+        <center>
+            <img src="roblox-logo.png" alt="" width="150" height="150">
+            <p>THIS IS THE BEST GAME FOR CHILDREN BECAUSE THE COMUNITY OF THIS GAME IS SO FAMILIY FRIENDLY</p>
+            <button id="pause" onclick="stop ()">PAUSE</button>
+        </center>
+    </div>
+
+    <script>
+        const btn = document.getElementById('pause')
+        const video = document.getElementById('trailer')
+        function stop() {
+            if (video.paused) {
+                video.play()
+                btn.innerHTML = "PAUSE"
+            }else{
+                video.pause()
+                btn.innerHTML = "PLAY"
+            }
+        }
+    </script>
+</body>
+
+</html>
