@@ -4,7 +4,6 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: green;
     font-family: monospace;
 }
 
@@ -13,27 +12,33 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 800px;
+    margin: 0 auto;
 }
 
 .wrapper {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 325px;
 }
 
-#pertanyaan{
+#pertanyaan {
     font-size: 25px;
     font-weight: 600;
 }
 
 .row {
     display: flex;
+    justify-content: center;
     flex-direction: row;
 }
 
 input {
     border: none;
-    background-color: white;
+    background-color: gainsboro;
     color: black;
     padding: 16px;
     font-size: 24px;
@@ -42,7 +47,7 @@ input {
 
 button {
     border: none;
-    background-color: gold;
+    background-color: lightslategray;
     display: flex;
     margin-left: 16px;
     margin-top: 8px;
@@ -53,6 +58,29 @@ button {
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.1);
+}
+
+#loader {
+    display: none;
+    height: 85px;
+    width: 85px;
+    position: absolute;
+    border-top: 15px solid lightslategray;
+    border-radius: 50%;
+    top: 50%;
+    left: 45%;
+    z-index: 1;
+    animation: 2s spin infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
